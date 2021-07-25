@@ -370,15 +370,15 @@ const html0 = `
                  </script>
                  <body>
                    <button name="Indicador11" onclick="setearIndicador('mic');">Encender Mic</button>
-		   <button name="Indicador12" onclick="setearIndicador('mic_apagar');">Apagar Mic</button>
+		               <button name="Indicador12" onclick="setearIndicador('mic_apagar');">Apagar Mic</button>
                    <button name="Indicador1" onclick="setearIndicador('face1');">Rostro 1</button>
                    <button name="Indicador2" onclick="setearIndicador('face2');">Rostro 2</button>
- 		   <button name="Indicador3" onclick="setearIndicador('face3');">Rostro 3</button>
-  		   <button name="Indicador4" onclick="setearIndicador('face4');">Rostro 4</button>
-   		   <button name="Indicador5" onclick="setearIndicador('face5');">Rostro 5</button>
-                   <button name="Indicador6" onclick="setearIndicador('face5');">Rostro 6</button>
-	           <button name="Indicador7" onclick="setearIndicador('face5');">Rostro 7</button>
-	           <button name="Indicador8" onclick="setearIndicador('face5');">Rostro 8</button>
+ 		               <button name="Indicador3" onclick="setearIndicador('face3');">Rostro 3</button>
+  		             <button name="Indicador4" onclick="setearIndicador('face4');">Rostro 4</button>
+   		              <button name="Indicador5" onclick="setearIndicador('face5');">Rostro 5</button>
+                   <button name="Indicador6" onclick="setearIndicador('face6');">Rostro 6</button>
+	                 <button name="Indicador7" onclick="setearIndicador('face7');">Rostro 7</button>
+	                  <button name="Indicador8" onclick="setearIndicador('face8');">Rostro 8</button>
        		   
                    <h1 id="demo">push_mic</h1>
  
