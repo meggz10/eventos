@@ -340,11 +340,12 @@ conexion.connect(function(err) {
 // -----------------------------------------------------------------------------------------------------
 // -- Constantes
 const express = require('express')
-//const app = express()
-//const port = 3000
+const app = express()
+const port = 3000
 
 
-const port = process.env.PORT;
+//const port = process.env.
+port;
 
 //const mariadb = require('mariadb');
 const mariadb = require('mysql');
