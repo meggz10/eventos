@@ -122,6 +122,23 @@ pool.query('UPDATE eventos_arbol2 SET mic = 0');
 }
 
 
+PoolFuncionMysqlmic_gif = (res) => {
+
+var mysql = require('mysql');
+var pool  = mysql.createPool({
+  connectionLimit : 100,
+  host            : 'us-cdbr-east-04.cleardb.com',
+  user            : 'bd6f80629514ea',
+  password        : '1839652a',
+  database        : 'heroku_f715d3e4e7adfed'
+});
+
+
+pool.query('UPDATE eventos_arbol2 SET face = "mic.gif"');
+ 
+}
+
+
 PoolFuncionMysql1 = (res) => {
 
 var mysql = require('mysql');
@@ -343,9 +360,9 @@ const express = require('express')
 const app = express()
 
 
-//const port = 3000
+const port = 3000
 
-const port = process.env.PORT
+//const port = process.env.PORT
 //const port = process.env.
 //port;
 
@@ -429,7 +446,9 @@ app.get('/', (req, res) => {
 })
 
 app.get('/mic', (req, res) => {
-     PoolFuncionMysqlmic_on();
+	PoolFuncionMysqlmic_gif();
+	res.send(html0);
+     //PoolFuncionMysqlmic_on();
     //DataBaseMySqlmic();
     //overwrite_gif('image/principal/happy.txt', 'image/animacion.txt');
 })
@@ -437,29 +456,34 @@ app.get('/mic', (req, res) => {
 app.get('/mic_apagar', (req, res) => {
   //DataBaseMySqlmic_apagar();
     PoolFuncionMysqlmic_off();
+    res.send(html0);
 })
 
 
 app.get('/face1', (req, res) => {
     PoolFuncionMysql1();
-//overwrite_gif('image/principal/angry-talking.gif', 'image/animacion.gif');
+//overwrite_gif('image/principal/happy.txt', 'image/animacion.txt');
+res.send(html0);
 
 })
 
 app.get('/face2', (req, res) => {
     PoolFuncionMysql2();
 //overwrite_gif('image/principal/angry.txt', 'image/animacion.txt');
+res.send(html0);
 
 })
 
 app.get('/face3', (req, res) => {
 PoolFuncionMysql3();
 //overwrite_gif('image/principal/angry_talking.gif', 'image/animacion.gif');
+res.send(html0);
 })
 
 app.get('/face4', (req, res) => {
 PoolFuncionMysql4();
     //DataBaseMySql4();
+res.send(html0);
 })
 
 app.get('/face5', (req, res) => {
@@ -470,11 +494,13 @@ PoolFuncionMysql5();
 app.get('/face6', (req, res) => {
 PoolFuncionMysql6();
     //DataBaseMySql4();
+res.send(html0);
 })
 
 app.get('/face7', (req, res) => {
 PoolFuncionMysql7();
     //DataBaseMySql4();
+res.send(html0);
 })
 
 app.get('/face8', (req, res) => {
@@ -485,6 +511,7 @@ PoolFuncionMysql8();
 app.get('/select', (req, res) => {
   var push_mic = PoolFuncionMysql(res);
   //res.send('<h1>'+push_mic+'</h1>');
+//res.send(html0);
 })
 
 // ----------------------------------------------------------------------------------------------------------------------------
