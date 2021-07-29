@@ -134,7 +134,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "mic.gif"');
+pool.query('UPDATE eventos_arbol2 SET face = "Hablar.gif"');
  
 }
 
@@ -151,7 +151,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "happy-blink.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Miedo.gif"');
  
 }
 
@@ -167,7 +167,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "happy2.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Asombro.gif"');
  
 }
 
@@ -183,7 +183,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "happy.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Confusion.gif"');
  
 }
 
@@ -199,7 +199,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "angry.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Triste.gif"');
  
 }
 
@@ -215,7 +215,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "face5.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Feliz.gif"');
  
 }
 
@@ -231,7 +231,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "face6.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Ternura.gif"');
  
 }
 
@@ -247,7 +247,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "face7.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Enojo.gif"');
  
 }
 
@@ -263,7 +263,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "face8.png"');
+pool.query('UPDATE eventos_arbol2 SET face = "Orgullo.gif"');
  
 }
 
@@ -387,6 +387,7 @@ const html0 = `
                  <body>
                    <button name="Indicador11" onclick="setearIndicador('mic');">Encender Mic</button>
 		               <button name="Indicador12" onclick="setearIndicador('mic_apagar');">Apagar Mic</button>
+		
                    <button name="Indicador1" onclick="setearIndicador('face1');">Rostro 1</button>
                    <button name="Indicador2" onclick="setearIndicador('face2');">Rostro 2</button>
  		               <button name="Indicador3" onclick="setearIndicador('face3');">Rostro 3</button>
