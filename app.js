@@ -489,6 +489,7 @@ res.send(html0);
 app.get('/face5', (req, res) => {
 PoolFuncionMysql5();
     //DataBaseMySql4();
+res.send(html0);
 })
 
 app.get('/face6', (req, res) => {
@@ -506,6 +507,7 @@ res.send(html0);
 app.get('/face8', (req, res) => {
 PoolFuncionMysql8();
     //DataBaseMySql4();
+res.send(html0);
 })
 
 app.get('/select', (req, res) => {
