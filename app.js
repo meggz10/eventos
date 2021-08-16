@@ -117,7 +117,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "main.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "main.gif"');
  
 }
 
@@ -134,7 +134,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Hablar.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Hablar.gif"');
  
 }
 
@@ -151,7 +151,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Miedo.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Miedo.gif"');
  
 }
 
@@ -167,7 +167,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Asombro.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Asombro.gif"');
  
 }
 
@@ -183,7 +183,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Confusion.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Confusion.gif"');
  
 }
 
@@ -199,7 +199,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Triste.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Triste.gif"');
  
 }
 
@@ -215,7 +215,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Feliz.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Feliz.gif"');
  
 }
 
@@ -231,7 +231,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Ternura.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Ternura.gif"');
  
 }
 
@@ -247,7 +247,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Enojo.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Enojo.gif"');
  
 }
 
@@ -263,7 +263,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol2 SET face = "Orgullo.gif"');
+pool.query('UPDATE eventos_arbol3 SET face = "Orgullo.gif"');
  
 }
 
