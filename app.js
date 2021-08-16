@@ -446,13 +446,14 @@ app.get('/', (req, res) => {
 })
 
 app.get('/mic', (req, res) => {
-	//PoolFuncionMysqlmic_gif();
-	PoolFuncionMysqlmic_off();
+	PoolFuncionMysqlmic_gif();
+	//PoolFuncionMysqlmic_off();
 	res.send(html0);
      //PoolFuncionMysqlmic_on();
     //DataBaseMySqlmic();
     //overwrite_gif('image/principal/happy.txt', 'image/animacion.txt');
 })
+
 
 app.get('/mic_apagar', (req, res) => {
   //DataBaseMySqlmic_apagar();
