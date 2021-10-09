@@ -70,6 +70,41 @@ return push_mic;
 
 }
 
+//*********************************************** */
+//codigo nuevo para apagar microfono remoto del ipad
+PoolFuncionMysqlmic_remoto_1 = (res) => {
+
+  var mysql = require('mysql');
+  var pool  = mysql.createPool({
+    connectionLimit : 100,
+    host            : 'us-cdbr-east-04.cleardb.com',
+    user            : 'bd6f80629514ea',
+    password        : '1839652a',
+    database        : 'heroku_f715d3e4e7adfed'
+  });
+  
+  
+  pool.query('UPDATE eventos_arbol5 SET mic = "1"');
+   
+  }
+
+  PoolFuncionMysqlmic_remoto_0 = (res) => {
+
+    var mysql = require('mysql');
+    var pool  = mysql.createPool({
+      connectionLimit : 100,
+      host            : 'us-cdbr-east-04.cleardb.com',
+      user            : 'bd6f80629514ea',
+      password        : '1839652a',
+      database        : 'heroku_f715d3e4e7adfed'
+    });
+    
+    
+    pool.query('UPDATE eventos_arbol5 SET mic = "0"');
+     
+    }
+
+/**************************************************/
 
 
 DataBaseMySql1 = () => {
@@ -117,7 +152,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "main.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "main.gif"');
  
 }
 
@@ -134,7 +169,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Hablar.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Hablar.gif"');
  
 }
 
@@ -151,7 +186,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Miedo.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Miedo.gif"');
  
 }
 
@@ -167,7 +202,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Asombro.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Asombro.gif"');
  
 }
 
@@ -183,7 +218,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Confusion.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Confusion.gif"');
  
 }
 
@@ -199,7 +234,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Triste.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Triste.gif"');
  
 }
 
@@ -215,7 +250,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Feliz.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Feliz.gif"');
  
 }
 
@@ -231,7 +266,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Ternura.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Ternura.gif"');
  
 }
 
@@ -247,7 +282,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Enojo.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Enojo.gif"');
  
 }
 
@@ -263,7 +298,7 @@ var pool  = mysql.createPool({
 });
 
 
-pool.query('UPDATE eventos_arbol4 SET face = "Orgullo.gif"');
+pool.query('UPDATE eventos_arbol5 SET face = "Orgullo.gif"');
  
 }
 
@@ -387,6 +422,9 @@ const html0 = `
                  <body>
                    <button name="Indicador11" onclick="setearIndicador('mic');">Encender Mic</button>
 		               <button name="Indicador12" onclick="setearIndicador('mic_apagar');">Apagar Mic</button>
+
+                   <button name="Indicador13" onclick="setearIndicador('mic_remoto1');">Iniciar Mic remoto</button>
+                   <button name="Indicador14" onclick="setearIndicador('mic_remoto0');">Apagar Mic remoto</button>
 		
                    <button name="Indicador1" onclick="setearIndicador('face1');">Rostro 1</button>
                    <button name="Indicador2" onclick="setearIndicador('face2');">Rostro 2</button>
@@ -460,6 +498,21 @@ app.get('/mic_apagar', (req, res) => {
     PoolFuncionMysqlmic_off();
     res.send(html0);
 })
+
+app.get('/mic_remoto1', (req, res) => {
+  //DataBaseMySqlmic_apagar();
+  PoolFuncionMysqlmic_remoto_1();
+    res.send(html0);
+})
+
+app.get('/mic_remoto0', (req, res) => {
+  //DataBaseMySqlmic_apagar();
+  PoolFuncionMysqlmic_remoto_0();
+    res.send(html0);
+})
+
+
+
 
 
 app.get('/face1', (req, res) => {
