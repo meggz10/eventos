@@ -129,14 +129,14 @@ PoolFuncionMysqlmic_on = (res) => {
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET mic = 1');
+pool.query('UPDATE eventos_arbol1 SET mic = 1');
  
 }
 
@@ -145,14 +145,14 @@ PoolFuncionMysqlmic_off = (res) => {
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "main.gif"');
+pool.query('UPDATE eventos_arbol1 SET face = "main.gif"');
  
 }
 
@@ -162,144 +162,337 @@ PoolFuncionMysqlmic_gif = (res) => {
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Hablar.gif"');
+pool.query('UPDATE eventos_arbol1 SET face = "Hablar.gif"');
  
 }
 
 
 PoolFuncionMysql1 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
-});
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'*/
+  
+  const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Miedo.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
+//});
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Miedo.gif"');
+//pool.query('UPDATE eventos_arbol1 SET face = "Miedo.gif"');
  
 }
 
 PoolFuncionMysql2 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Asombro.gif"');
- 
+pool.query('UPDATE eventos_arbol1 SET face = "Asombro.gif"');-
+ */
+
+const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Asombro.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
+
 }
 
 PoolFuncionMysql3 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Confusion.gif"');
- 
+pool.query('UPDATE eventos_arbol1 SET face = "Confusion.gif"');
+ */
+
+const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Confusion.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
 }
 
 PoolFuncionMysql4 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Triste.gif"');
- 
+pool.query('UPDATE eventos_arbol1 SET face = "Triste.gif"');
+ */
+
+const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Triste.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
 }
 
 PoolFuncionMysql5 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Feliz.gif"');
- 
+pool.query('UPDATE eventos_arbol1 SET face = "Feliz.gif"');
+ */
+
+const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Feliz.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
 }
 
 PoolFuncionMysql6 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Ternura.gif"');
- 
+pool.query('UPDATE eventos_arbol1 SET face = "Ternura.gif"');
+ */
+
+const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Ternura.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
 }
 
 PoolFuncionMysql7 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Enojo.gif"');
- 
+pool.query('UPDATE eventos_arbol1 SET face = "Enojo.gif"');
+ */
+
+const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Enojo.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
 }
 
 PoolFuncionMysql8 = (res) => {
-
+/*
 var mysql = require('mysql');
 var pool  = mysql.createPool({
   connectionLimit : 100,
-  host            : 'us-cdbr-east-04.cleardb.com',
-  user            : 'bd6f80629514ea',
-  password        : '1839652a',
-  database        : 'heroku_f715d3e4e7adfed'
+  host            : '192.168.0.19',
+  user            : 'root',
+  password        : 'Maryen08',
+  database        : 'myrot_db'
 });
 
 
-pool.query('UPDATE eventos_arbol9 SET face = "Orgullo.gif"');
- 
+pool.query('UPDATE eventos_arbol1 SET face = "Orgullo.gif"');
+ */
+
+const path = require('path');
+  const fs = require('fs');
+  
+  // Obtén la ruta del proyecto
+  const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
+  
+  // Construye la ruta del archivo dentro del proyecto
+  const rutaArchivo = path.join(rutaProyecto, 'caras.json');
+  
+  // Lee el contenido del archivo
+  const contenido = fs.readFileSync(rutaArchivo);
+  
+  // Parsea el contenido como JSON
+  const datos = JSON.parse(contenido);
+  
+  // Modificamos el valor de caras
+  datos.caras = 'Orgullo.gif';
+  
+  // Puedes sobrescribir el archivo con los nuevos datos si es necesario
+  fs.writeFileSync(rutaArchivo, JSON.stringify(datos, null, 2));
+  
+  console.log('Archivo JSON Actualizado Correctamente');
+
 }
 
 
@@ -395,8 +588,8 @@ const express = require('express')
 const app = express()
 
 
-//const port = 3000
-const port = process.env.PORT
+const port = 3001
+//const port = process.env.PORT
 //const port = process.env.
 //port;
 
