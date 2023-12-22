@@ -676,6 +676,25 @@ app.get('/', (req, res) => {
   res.send(html0)
 })
 
+app.get('/caras.json', (req, res) => {
+  const filePath = path.join(__dirname, 'caras.json');
+
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).json({ error: 'Error al leer el archivo caras.json' });
+    }
+
+    try {
+      const jsonData = JSON.parse(data);
+      res.json(jsonData);
+    } catch (parseError) {
+      console.error(parseError);
+      res.status(500).json({ error: 'Error al analizar el contenido de caras.json' });
+    }
+  });
+});
+
 app.get('/mic', (req, res) => {
 	PoolFuncionMysqlmic_gif();
 	//PoolFuncionMysqlmic_off();
