@@ -1,3 +1,6 @@
+const path = require('path');
+const fs = require('fs');
+
 var push_mic = 0;
 
 DataBaseMySqlmic = () => {
@@ -184,8 +187,7 @@ var pool  = mysql.createPool({
   password        : 'Maryen08',
   database        : 'myrot_db'*/
   
-  const path = require('path');
-  const fs = require('fs');
+  
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
@@ -229,8 +231,7 @@ var pool  = mysql.createPool({
 pool.query('UPDATE eventos_arbol1 SET face = "Asombro.gif"');-
  */
 
-const path = require('path');
-  const fs = require('fs');
+
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
@@ -270,8 +271,7 @@ var pool  = mysql.createPool({
 pool.query('UPDATE eventos_arbol1 SET face = "Confusion.gif"');
  */
 
-const path = require('path');
-  const fs = require('fs');
+
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
@@ -310,8 +310,7 @@ var pool  = mysql.createPool({
 pool.query('UPDATE eventos_arbol1 SET face = "Triste.gif"');
  */
 
-const path = require('path');
-  const fs = require('fs');
+
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
@@ -350,8 +349,7 @@ var pool  = mysql.createPool({
 pool.query('UPDATE eventos_arbol1 SET face = "Feliz.gif"');
  */
 
-const path = require('path');
-  const fs = require('fs');
+
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
@@ -390,8 +388,7 @@ var pool  = mysql.createPool({
 pool.query('UPDATE eventos_arbol1 SET face = "Ternura.gif"');
  */
 
-const path = require('path');
-  const fs = require('fs');
+
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
@@ -430,8 +427,7 @@ var pool  = mysql.createPool({
 pool.query('UPDATE eventos_arbol1 SET face = "Enojo.gif"');
  */
 
-const path = require('path');
-  const fs = require('fs');
+
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
@@ -470,8 +466,7 @@ var pool  = mysql.createPool({
 pool.query('UPDATE eventos_arbol1 SET face = "Orgullo.gif"');
  */
 
-const path = require('path');
-  const fs = require('fs');
+
   
   // Obtén la ruta del proyecto
   const rutaProyecto = __dirname; // __dirname contiene la ruta del directorio actual del script
